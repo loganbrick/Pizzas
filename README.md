@@ -2,6 +2,8 @@
 
 The steps I have taked for optimization are as follows:
 
+In _index.html_:
+
 *Optimized Cameron's profile picture and pizzeria.jpg
 *Attempted to load web fonts asynchronously
 *Loading and calling the analytics.js asynchronously
