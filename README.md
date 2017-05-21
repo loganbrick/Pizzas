@@ -1,6 +1,14 @@
 ## Website Performance Optimization portfolio project
 
-##__Logan's Notes__
+##_Directory Structure_
+
+*project root directory
+ *dev - Contains non-minified files
+ *prod - Contains minified files
+
+The prod contents are active as my GitHub Page for testing purposes.
+
+##__Logan's Optimization Notes__
 
 The steps I have taked for optimization are as follows:
 
@@ -14,21 +22,16 @@ In _index.html_:
 In _views/js/main.js_:
 
 * Prevented some layout thrashing by moving body.scrollTop outside of the loop in the updatePositions function
-* Changed the amount of loop iterations by calculating the maximum amount of oscillating pizzas to be shown on the screen
+* Changed the amount of moving pizza loop iterations by calculating the maximum amount of oscillating pizzas to be shown on the screen
+* Precalculated the locations of the oscillating pizzas since there were only 5 relative locations they can be in
+* Used transformX rather than setting the 'left' property for the oscillating pizzas and warned the browser the element will transform
+* Re-wrote the logic behind the pizza slider as the old was unnecessarily complex and forced synchronous layouts
 
 
 In _pizza.html_:
 
 *Optimized the pizza image and pizzeria.jpg
 *Optimized the Bootstrap CSS
-
-###_Directory Structure_
-
-*project root directory
- *dev - Contains non-minified files
- *prod - Contains minified files
-
-The prod contents are active as my GitHub Page for testing purposes.
 
 
 ## Old contents are below
