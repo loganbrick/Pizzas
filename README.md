@@ -3,6 +3,8 @@
 The steps I have taked for optimization are as follows:
 
 *Optimized Cameron's profile picture and pizzeria.jpg
+*Attempted to load web fonts asynchronously
+*Loading and calling the analytics.js asynchronously
 
 
 ## Old stuff is below
