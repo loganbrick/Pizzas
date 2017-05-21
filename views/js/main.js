@@ -535,7 +535,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var maxRows = Math.floor(window.screen.height/s);
   var numberOFPizzas = rows*cols;
 
-  for (var i = 0, i < numberOFPizzas; i++){
+  for (var i = 0, i < 200; i++){
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
