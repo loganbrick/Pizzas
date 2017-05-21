@@ -1,5 +1,7 @@
 ## Website Performance Optimization portfolio project
 
+##__Logan's Notes__
+
 The steps I have taked for optimization are as follows:
 
 In _index.html_:
@@ -18,8 +20,16 @@ In _pizza.html_:
 *Optimized the pizza image
 *Optimized the Bootstrap CSS
 
+###_Directory Structure_
 
-## Old stuff is below
+*project root directory
+ *dev - Contains non-minified files
+ *prod - Contains minified files
+
+The prod contents are active as my GitHub Page for testing purposes.
+
+
+## Old contents are below
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
