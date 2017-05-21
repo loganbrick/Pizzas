@@ -5,8 +5,18 @@ The steps I have taked for optimization are as follows:
 In _index.html_:
 
 *Optimized Cameron's profile picture and pizzeria.jpg
-*Attempted to load web fonts asynchronously
+*Loading web fonts asynchronously
 *Loading and calling the analytics.js asynchronously
+*Inlined all CSS
+
+In _views/js/main.js_:
+
+
+
+In _pizza.html_:
+
+*Optimized the pizza image
+*Optimized the Bootstrap CSS
 
 
 ## Old stuff is below
