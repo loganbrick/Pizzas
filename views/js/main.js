@@ -500,10 +500,11 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
-
+  //Massive thrashing caused by body.scrollTop. Replacing it with bodyScrollTop will fix it.
   var items = document.querySelectorAll('.mover');
+  var bodyScrollTop = document.body.scrollTop;
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    var phase = Math.sin((bodyscrollTop / 1250) + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
@@ -524,7 +525,17 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
+
+  /*
+  200 oscillating pizzas is probably above and beyond what we need. The
+  following takes the maximum amount of pizzas that can be shown onscreen
+  and uses that as our number of pizzas.
+  */
+
+  var maxRows = Math.floor(window.screen.height/s);
+  var numberOFPizzas = rows*cols;
+
+  for (var i = 0, i < numberOFPizzas; i++){
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";

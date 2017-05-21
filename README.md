@@ -13,11 +13,13 @@ In _index.html_:
 
 In _views/js/main.js_:
 
+* Prevented some layout thrashing by moving body.scrollTop outside of the loop in the updatePositions function
+* Changed the amount of loop iterations by calculating the maximum amount of oscillating pizzas to be shown on the screen
 
 
 In _pizza.html_:
 
-*Optimized the pizza image
+*Optimized the pizza image and pizzeria.jpg
 *Optimized the Bootstrap CSS
 
 ###_Directory Structure_
