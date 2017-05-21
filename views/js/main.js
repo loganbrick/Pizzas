@@ -533,7 +533,7 @@ document.addEventListener('DOMContentLoaded', function() {
   */
 
   var maxRows = Math.floor(window.screen.height/s);
-  var numberOFPizzas = rows*cols;
+  var numberOFPizzas = maxRows*cols;
 
   for (var i = 0; i < numberOFPizzas; i++){
     var elem = document.createElement('img');
