@@ -430,7 +430,9 @@ var resizePizzas = function(size) {
   function changePizzaSizes(size) {
 
     // Get the element array of the Pizza containers
-    var pizzaContainer = document.querySelectorAll("randomPizzaContainer");
+    // On a whim from the forums, changed querySelectorAll to
+    // getElementsByClassName, which is quicker
+    var pizzaContainer = document.getElementsByClassName('randomPizzaContainer');
 
     // Find the length of the array and store it
     var numberOfRandomPizzas = pizzaContainer.length;
@@ -502,7 +504,9 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
-  var items = document.querySelectorAll('.mover');
+  // On a whim from the forums, changed querySelectorAll to
+  // getElementsByClassName, which is quicker
+  var items = document.getElementsByClassName('mover');
   //Massive thrashing caused by body.scrollTop. Replacing it with bodyScrollTop will fix it.
   var bodyScrollTop = document.body.scrollTop;
 
